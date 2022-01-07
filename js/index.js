@@ -1,10 +1,12 @@
+var file_num = 23;
+var photo_row = 4;
+var photo_col = 10;
+var photo_num = photo_row * photo_col;
 !(function () {
         'use strict';
 
-        var file_num = 23;
-        var photo_row = 4;
-        var photo_col = 10;
-        var photo_num = photo_row * photo_col;
+
+
         var gallery = $('#gallery');
         var checkList = $('#selectedList');
         var photos = [];
@@ -189,7 +191,7 @@
 
         function getPhotos() {
             let list = []
-            for (let i = 1; i <= 23; i++) {
+            for (let i = 1; i <= file_num; i++) {
                 list.push('photo/' + i + '.jpg');
             }
             return list;
@@ -197,7 +199,7 @@
 
         function getNumList() {
             let list = []
-            for (let i = 1; i <= 40; i++) {
+            for (let i = 1; i <= photo_num; i++) {
                 list.push(i);
             }
             return list;
