@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LuckyOne</title>
+    <link rel='stylesheet' href='css/animate.css'>
+    <link rel='stylesheet' href='css/buttons.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/xcConfirm.css'>
+    <style>
+        span{
+            color: white;
+            font-size: 24px;
+        }
+        input{
+            color: white;
+            background: #C8171F;
+            border: unset;
+        }
+
+        .button-jumbo{
+            background-color:#FF9900;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .button-3d.button-action {
+            box-shadow: 0 7px 0 #FF9900, 0 8px 3px rgb(0 0 0 / 30%);
+        }
+
+        body{
+            background-image: url("/img/bg.jpeg");
+            background-repeat: no-repeat;
+            background-size: 1980px 1080px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title{
+            display: flex;
+            justify-content: center;
+        }
+        .selectedList{
+            position: absolute;
+            width: 200px;
+            right: 0;
+            top: 30%;
+            background: #d0321b;
+            border-radius: 10px;
+            z-index: 99;
+        }
+        #selectedList{
+            height: 400px;
+            overflow-y: scroll;
+        }
+        #selectedList li{
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #selectedList a{
+            margin-right: 10px;
+        }
+
+        #selectedList span{
+            font-size: 10px;
+        }
+        #selectedList img{
+            width: 80px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <ul id='gallery'></ul>
+    <div style="clear:both;"></div>
+    <div style="text-align:center; padding-top:30px; display: flex;">
+        <span>表演人数：<input type="tel" id="txtNum" style="font-size:24px; width:80px;height: 60px;border-radius: 10px;text-align: center;margin-right: 20px" value="1"></span>
+
+        <button style="font-size:40px; width:200px;" id="action" class="button button-3d button-action button-pill button-jumbo" data-action="start">开始</button>
+        <button style="font-size:40px; width:200px;" id="reaction" class="button button-3d button-action button-pill button-jumbo" data-action="start">重置</button>
+        <button style="font-size:40px; width:200px;" id="list" class="button button-3d button-action button-pill button-jumbo" data-action="hidden">列表</button>
+    </div>
+    <div class="selectedList" style="display: none" data-action="hidden">
+        <span class="title">表演列表</span>
+        <ul id="selectedList"></ul>
+    </div>
+    <script src='js/jquery.js'></script>
+    <script src='js/buttons.js'></script>
+    <script src='js/xcConfirm.js'></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
